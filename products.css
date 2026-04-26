@@ -1,0 +1,340 @@
+:root {
+    --bg: #0b1220;
+    --card: #121a2b;
+    --accent: #4ade80;
+    --text: #e5e7eb;
+    --muted: #9ca3af;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", sans-serif;
+}
+
+body {
+    background: var(--bg);
+    color: var(--text);
+}
+
+/* HEADER */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.2rem 3rem;
+    background: #0f172a;
+    border-bottom: 1px solid #1e293b;
+}
+
+header h1 {
+    color: var(--accent);
+    font-size: 1.5rem;
+}
+
+nav a {
+    margin-left: 2rem;
+    text-decoration: none;
+    color: var(--text);
+    transition: 0.3s;
+}
+
+nav a:hover,
+nav a.active {
+    color: var(--accent);
+}
+
+.cart-info {
+    background: var(--accent);
+    color: #022c22;
+    padding: 0.5rem 1.2rem;
+    border-radius: 20px;
+    font-weight: bold;
+}
+
+/* MAIN SECTION */
+.prod {
+    padding: 3rem;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.prod h1 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    background: linear-gradient(to right, #fff, var(--accent));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.prod h2 {
+    margin-bottom: 1.5rem;
+}
+
+/* SEARCH BAR */
+#searchInput {
+    width: 100%;
+    padding: 0.9rem 1rem;
+    border-radius: 8px;
+    border: 1px solid #1e293b;
+    outline: none;
+    margin-bottom: 2rem;
+    font-size: 1rem;
+    background: #1e293b;
+    color: white;
+    transition: border-color 0.3s;
+}
+
+#searchInput:focus {
+    border-color: var(--accent);
+    box-shadow: 0 0 0 3px rgba(74, 222, 128, 0.1);
+}
+
+/* CATEGORIES */
+.categories {
+    margin-bottom: 2rem;
+}
+
+.cat-btn {
+    margin-right: 10px;
+    margin-bottom: 8px;
+    padding: 0.5rem 1.2rem;
+    border-radius: 20px;
+    border: 1px solid var(--accent);
+    background: transparent;
+    color: var(--accent);
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.cat-btn:hover,
+.cat-btn.active {
+    background: var(--accent);
+    color: #022c22;
+}
+
+/* GRID */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 1.5rem;
+}
+
+/* CARD */
+.game-card {
+    background: var(--card);
+    border-radius: 12px;
+    overflow: hidden;
+    transition: 0.3s;
+    cursor: pointer;
+    border: 1px solid #1e293b;
+}
+
+.game-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 15px 30px rgba(74, 222, 128, 0.2);
+    border-color: var(--accent);
+}
+
+/* IMAGE */
+.game-image {
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+}
+
+/* CARD BODY */
+.game-info {
+    padding: 1rem;
+}
+
+.game-info h3 {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+    color: white;
+}
+
+.category {
+    color: var(--muted);
+    font-size: 0.85rem;
+    margin-bottom: 0.5rem;
+}
+
+.price {
+    color: var(--accent);
+    font-weight: bold;
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+}
+
+/* CART CONTROLS */
+.cart-controls {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+.quantity-input {
+    width: 50px;
+    padding: 0.5rem;
+    border: 1px solid var(--accent);
+    background: #0b1220;
+    color: white;
+    border-radius: 4px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.quantity-input:focus {
+    outline: none;
+    box-shadow: 0 0 8px var(--accent);
+}
+
+.add-to-cart-btn {
+    flex: 1;
+    padding: 0.6rem;
+    border: none;
+    border-radius: 6px;
+    background: var(--accent);
+    color: #022c22;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+    font-size: 0.9rem;
+}
+
+.add-to-cart-btn:hover {
+    opacity: 0.85;
+    transform: scale(1.02);
+}
+
+/* PRODUCT SPOTLIGHT (product.html) */
+.spotlight-card {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    background: var(--card);
+    border-radius: 16px;
+    overflow: hidden;
+    border: 1px solid #1e293b;
+    margin-bottom: 2rem;
+}
+
+.spotlight-image {
+    position: relative;
+}
+
+.spotlight-image img {
+    width: 100%;
+    height: 100%;
+    min-height: 400px;
+    object-fit: cover;
+}
+
+.spotlight-badge {
+    position: absolute;
+    top: 16px;
+    left: 16px;
+    background: rgba(239, 68, 68, 0.9);
+    color: white;
+    padding: 6px 16px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+.spotlight-info {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.spotlight-info h2 {
+    font-size: 2rem;
+    color: white;
+    margin-bottom: 8px;
+}
+
+.spotlight-category {
+    color: var(--accent);
+    font-weight: 500;
+    margin-bottom: 1rem;
+}
+
+.spotlight-desc {
+    color: var(--muted);
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+}
+
+.spotlight-price {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.old-price {
+    color: var(--muted);
+    text-decoration: line-through;
+    font-size: 1.1rem;
+}
+
+.current-price {
+    color: var(--accent);
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.spotlight-actions {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.spotlight-actions .quantity-input {
+    width: 60px;
+    padding: 10px;
+}
+
+.spotlight-actions .add-to-cart-btn {
+    padding: 12px 24px;
+    font-size: 1rem;
+}
+
+/* FOOTER */
+footer {
+    background: #070d18;
+    border-top: 1px solid #1e293b;
+    margin-top: 3rem;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding: 1.5rem;
+    color: var(--muted);
+    font-size: 0.85rem;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .prod {
+        padding: 2rem 1rem;
+    }
+
+    header {
+        padding: 1rem;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .spotlight-card {
+        grid-template-columns: 1fr;
+    }
+
+    .spotlight-image img {
+        min-height: 250px;
+    }
+}

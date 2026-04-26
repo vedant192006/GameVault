@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Browse our complete catalog of PS5, Xbox, and PC games. Filter by category, search by title, and add to cart instantly.">
+    <meta name="keywords" content="buy games online, game store India, PS5 games, Xbox games, PC games, action games, RPG games">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="GameVault">
+    <title>GameVault | Game Store - Browse All Games</title>
+    <link rel="stylesheet" href="products.css">
+</head>
+<body>
+
+<header>
+    <svg width="200" height="75" viewBox="0 0 800 300" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+            <linearGradient id="gvGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#22c55e" />
+                <stop offset="100%" stop-color="#4ade80" />
+            </linearGradient>
+            <linearGradient id="metal" x1="0%" y1="0%" x2="0%" y2="100%">
+                <stop offset="0%" stop-color="#E0E0E0" />
+                <stop offset="100%" stop-color="#9E9E9E" />
+            </linearGradient>
+        </defs>
+        <circle cx="150" cy="150" r="90" fill="url(#gvGradient)" stroke="url(#metal)" stroke-width="8" />
+        <circle cx="150" cy="150" r="60" fill="#0f172a" stroke="url(#metal)" stroke-width="4" />
+        <path d="M115 155 Q120 135 140 135 L160 135 Q180 135 185 155 Q190 175 170 175 L130 175 Q110 175 115 155 Z" fill="url(#gvGradient)" stroke="url(#metal)" stroke-width="2" />
+        <rect x="130" y="148" width="16" height="6" fill="#FFFFFF" />
+        <rect x="135" y="143" width="6" height="16" fill="#FFFFFF" />
+        <circle cx="165" cy="150" r="5" fill="#FFFFFF" />
+        <circle cx="178" cy="158" r="5" fill="#FFFFFF" />
+        <text x="280" y="165" font-family="Verdana, Geneva, sans-serif" font-size="64" font-weight="bold" fill="url(#gvGradient)">
+            GameVault
+        </text>
+    </svg>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="products.html" class="active">Store</a>
+        <a href="product.html">Deals</a>
+        <a href="index.html#contact">Contact</a>
+        <a href="cart.html" class="cart-link">🛒 Cart (<span id="cart-count">0</span>)</a>
+    </nav>
+</header>
+
+<section class="prod">
+    <h1>Game Store</h1>
+
+    <!-- Search Bar -->
+    <input type="text" id="searchInput" placeholder="🔍 Search games by title or category..." aria-label="Search games">
+
+    <!-- Categories -->
+    <div class="categories" role="navigation" aria-label="Game Categories">
+        <button class="cat-btn active" data-category="All">All</button>
+        <button class="cat-btn" data-category="Action">Action</button>
+        <button class="cat-btn" data-category="RPG">RPG</button>
+        <button class="cat-btn" data-category="Adventure">Adventure</button>
+        <button class="cat-btn" data-category="Open World">Open World</button>
+    </div>
+
+    <!-- Product Grid -->
+    <div class="grid" id="gameGrid"></div>
+</section>
+
+<!-- Footer -->
+<footer>
+    <div class="footer-bottom">
+        <p>&copy; 2026 GameVault. All rights reserved.</p>
+    </div>
+</footer>
+
+<script src="cart-script.js"></script>
+<script src="script.js"></script>
+
+</body>
+</html>
